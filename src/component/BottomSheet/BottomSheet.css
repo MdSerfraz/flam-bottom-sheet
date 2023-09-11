@@ -1,0 +1,64 @@
+body {
+  height: 100%;
+  overflow-y: hidden;
+}
+.bottom-sheet.closed {
+    position: fixed;
+    bottom: 0%;
+    left: 0;
+    width: 100%;
+    background-color: darkgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    border: 2px solid black;
+  }
+  
+  .bottom-sheet.open {
+    transform: translateY(0%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform cubic-bezier(0.77, 0, 0.175, 1);
+    transition: all 0.3s ease-in-out;
+    border: 2px solid black;
+    height: 100vh;
+    background-color: burlywood;
+  }
+  
+  .bottom-sheet.half-open {
+    transform: translateY(50vh);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    height: 50vh;
+    background-color: cadetblue;
+  }
+  
+  .handle {
+    width: 30px;
+    height: 4px;
+    background-color: gray;
+    margin: 8px 0;
+    cursor: pointer;
+  }
+  
+  .content {
+    flex-grow: 1;
+  }
+  
+  .content p {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  button {
+    margin: 8px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 10px;
+  }
+
+  
